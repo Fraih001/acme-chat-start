@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+nav a {
+  display: inline-block;
+  margin: 1em;
+}
+
+form div {
+  margin: 1em;
+  display: inline-block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+select,input,button{
+  height: 2rem;
+}
+form > * {
+  margin: 1rem;
+}
