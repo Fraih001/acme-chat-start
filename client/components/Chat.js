@@ -19,7 +19,7 @@ export const Chat = ({ messages, onlineUsers, postMessage })=> {
           {
             onlineUsers.map( user => {
               return (
-                <option value={ user.id }>
+                <option key={ user.id } value={ user.id }>
                   { user.username }
                 </option>
               );
