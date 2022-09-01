@@ -29,7 +29,8 @@ router.get('/', async(req, res, next)=> {
       where: {
         [db.Sequelize.Op.or]: [
           {toId: user.id },
-          { toId: null }
+          { toId: null },
+          { fromId: user.id }
         ]
       },
       include: [
