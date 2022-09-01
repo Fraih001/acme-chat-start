@@ -5,7 +5,7 @@ import {createMessage} from '../store'
 /**
  * COMPONENT
  */
-export const Chat = ({ messages, onlineUsers, postMessage })=> {
+export const Chat = ({ messages, onlineUsers, postMessage, auth })=> {
   const [txt, setTxt ] = React.useState('');
   const [toId, setToId] = React.useState('');
   return (
@@ -34,8 +34,8 @@ export const Chat = ({ messages, onlineUsers, postMessage })=> {
         {
           messages.map( message => {
             return (
-              <li key={ message.id }>
-                To { message.to ? message.to.username : 'everyone' } "{ message.txt }" from { message.from.username }
+              <li key={ message.id } className={ `${message.isPublic ? 'public ': ''}${message.fromId === auth.id ? 'sent': 'received'}` }>
+                To { message.to ? message.to.username : 'PUBLIC' } "{ message.txt }" from { message.from.username }
               </li>
             );
           })

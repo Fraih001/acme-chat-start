@@ -3,8 +3,13 @@ const { Sequelize } = db;
 const socketMap = require('../../socketMap');
 
 
-
 const Message = db.define('message', {
+  isPublic: {
+    type: Sequelize.VIRTUAL,
+    get: function(){
+      return !this.toId;
+    }
+  },
   txt: {
     type: Sequelize.STRING
   },
