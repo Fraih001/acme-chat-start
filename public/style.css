@@ -24,7 +24,7 @@ form {
   display: flex;
   flex-direction: column;
 }
-select,input,button{
+option,input,button{
   height: 2rem;
 }
 form > * {

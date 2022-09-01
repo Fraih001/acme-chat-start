@@ -16,6 +16,15 @@ export const Chat = ({ messages, onlineUsers, postMessage })=> {
       }}>
         <select size={ onlineUsers.length + 1} value={ toId} onChange={ ev => setToId(ev.target.value)}>
           <option value=''>--- everyone ---</option>
+          {
+            onlineUsers.map( user => {
+              return (
+                <option value={ user.id }>
+                  { user.username }
+                </option>
+              );
+            })
+          }
         </select>
         <input onChange={ ev => setTxt(ev.target.value)}/>
         <button>Create</button>
