@@ -13,7 +13,7 @@
 - set config variable for SEED=true (you can remove it after data is seeded)
 
 - <a href='https://github.com/FullstackAcademy/acme-chat-start'>Starting Repo</a>
-- <a href='https://socket.io/docs/v4/server-initialization'>Serve Initialization</a>
+- <a href='https://socket.io/docs/v4/server-initialization'>Server Initialization</a>
 - <a href='https://socket.io/docs/v4/client-initialization/'>Client Initialization</a>
-- <a href='https://socket.io/docs/v4/broadcasting-events/'>Events</a>
+- <a href='https://socket.io/docs/v4/broadcasting-events/'>Broadcast Events</a>
 
